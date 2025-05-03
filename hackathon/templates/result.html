@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <h2>Life Themes</h2>
+    <ul>
+        {% for theme in themes %}
+            <li>{{ theme }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Chapter Outline</h2>
+    <ul>
+        {% for chapter in chapters %}
+            <li>{{ chapter }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Sample Chapter</h2>
+    <p style="white-space: pre-wrap;">{{ sample_chapter }}</p>
+
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
